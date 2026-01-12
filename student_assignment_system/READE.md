@@ -1,24 +1,27 @@
-# Student Assignment System
+# Student Assignment System (FastAPI + MongoDB)
 
-A FastAPI-based backend system for managing student assignments with secure authentication and MongoDB.
+## Description
+Backend system for managing students, teachers, assignments, and grading.
 
 ## Features
 - Student & Teacher registration
 - Role-based authentication
 - Secure password hashing (bcrypt)
-- Assignment submission and grading
-- MongoDB (Motor) async database
-- FastAPI + Swagger documentation
+- Assignment submission
+- Assignment grading
+- MongoDB database (Motor async driver)
+- Swagger API documentation
 
 ## Tech Stack
-- Python
 - FastAPI
 - MongoDB
 - Motor
-- bcrypt
-- Uvicorn
+- Passlib (bcrypt)
+- Python 3.10+
 
-## Setup Instructions
-
-### 1. Clone repository
+## How to Run
 ```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
